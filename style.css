@@ -1,0 +1,388 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+main{
+    width: 100%;
+}
+
+.background {
+    position: relative;
+    height: 650px;
+    width: 100%;
+    background: url('image/header1.jpg');
+    background-size: cover;
+    background-position: center;
+
+}
+
+nav {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+nav .logo {
+    cursor: pointer;
+    margin-left: 41px;
+    border-radius: 5px;
+}
+
+nav ul {
+    display: flex;
+    flex: 1;
+    list-style: none;
+}
+
+ul li {
+    padding-right: 35px;
+}
+
+ul li a {
+    position: relative;
+    padding: 10px 0px;
+    text-decoration: none;
+    color: rgb(253, 253, 253);
+    font-size: 30px;
+    line-height: 36px;
+    font-weight: 100;
+    margin-top: -20px;
+}
+
+/* animation nav */
+
+ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0;
+    transform: translateX(-50%) translateY(-5px);
+    height: 3px;
+    background: #850c49;
+    transition: 0.3s;
+}
+
+ul li a:hover::after {
+    width: 35%;
+}
+
+/*fin d'aniamation nav */
+
+.gamerz {
+    width: 100%;
+    margin: 0 auto;
+    position: absolute;
+    top: 272px;
+    color: #ffffff;
+    font-size: 70px;
+    text-align: center;
+}
+
+/* h1 ET animation*/
+.gamerz h1 {
+    text-align: center;
+    font-size: 70px;
+    color: transparent;
+    -webkit-text-stroke: 1px white;
+    background: url('image/animationh1.png');
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-position: 0 0;
+    animation: animate 15s linear 2s infinite alternate;
+}
+
+/*pour ameliorer l'animation */
+
+@keyframes animate {
+    100% {
+        background-position: -500px 0;
+    }
+}
+
+/* debut intro */
+.intro h2 {
+
+    text-align: center;
+    margin-top: 15px;
+    font-weight: 600;
+    font-size: 70px;
+    line-height: 85px;
+
+}
+
+.line1 {
+
+    margin-left: 783px;
+    width: 355px;
+    height: 0px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #9E9E9E;
+}
+
+#history {
+
+    justify-content: center;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 25px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 24px;
+    letter-spacing: 0.3em;
+    color: #9E9E9E;
+    height: 24.1px;
+}
+
+#paragraphhistory {
+
+    background-color: #EEEEEE;
+    justify-content: center;
+    text-align: left;
+    display: flex;
+    padding: 160px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 36px;
+    color: #636363;
+}
+
+
+
+/*fi intro*/
+
+/* debut grid titre nos evenemets */
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 20% repeat(2, 38%);
+    justify-items: center;
+    background-color: #303030;
+    ;
+
+}
+
+.grid-container .event {
+    background-color: #101010;
+    grid-column: 1 / span 2;
+    margin-top: 5vw;
+    padding-top: 2.5vw;
+    width: 90%;
+    height: 30vh;
+    font-size: 3vw;
+    text-align: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    color: #F4F4F4;
+    padding-top: 3vh;
+
+}
+
+.grid-container .event h2 {
+
+    font-style: normal;
+    font-weight: 600;
+    font-size: 70px;
+    line-height: 85px;
+    color: #FFFFFF;
+}
+
+.line {
+
+    margin-left: 658px;
+    width: 355px;
+    height: 0px;
+    margin-top: 10px;
+    margin-bottom: 25px;
+    border: 1px solid #9E9E9E;
+}
+
+h6 {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 0.3em;
+    color: #9E9E9E;
+}
+
+/* fin grid titre nos evenemets */
+
+/* debut 4 photos nos evenemets */
+
+
+.grid-container .photo11 {
+    background-image: url("image/gamer.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 90%;
+    height: 70vh;
+    justify-self: end;
+}
+
+.grid-container .photo12 {
+    background-image: url("image/prod2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 90%;
+    height: 70vh;
+    justify-self: start;
+
+}
+
+.grid-container .photo21 {
+    background-image: url("image/productions\ 3.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 90%;
+    height: 70vh;
+    justify-self: end;
+}
+
+.grid-container .photo22 {
+    background-image: url("image/pro4.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 90%;
+    height: 70vh;
+    justify-self: start;
+}
+
+/* fin 4 photos nos evenemets */
+
+/* container 2 photos 2 textes*/
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+}
+
+.content h2 {
+    margin-top: 0;
+    color: #101010;
+    margin-left: 11vh;
+    font-size: 45px;
+    margin-bottom: 10px;
+}
+
+#retrogaming {
+    color: #F4F4F4;
+}
+
+.photo {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.content p {
+    text-align: left;
+    margin-top: 50px;
+    margin-left: 100px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 26px;
+    color: #808080;
+}
+
+.photo img {
+    width: 100%;
+    object-fit: cover;
+}
+
+/*  fin container 2 photos 2 textes*/
+
+/*  debut div en flex box photo droite et texte gauche*/
+
+
+.container3 {
+    display: flex;
+}
+
+.container3 img {
+    flex-basis: 50%;
+}
+
+.container3 div {
+    flex-basis: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+}
+
+.container3 div h2 {
+    margin-top: 0;
+    color: #101010;
+    margin-left: 11vh;
+    font-size: 45px;
+    margin-bottom: 10px;
+}
+
+.container3 div p {
+
+    text-align: left;
+    margin-top: 50px;
+    margin-left: 100px;
+    margin-right: 115px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 26px;
+    color: #808080;
+}
+
+/*  fin div en flex box photo droite et texte à gauche*/
+
+/* debut footer */
+
+.links {
+
+    background-color: #303030;
+    height: 11vh;
+}
+
+.media {
+    justify-content: center;
+    align-items: center;
+    margin-left: 700px;
+}
+
+.links img {
+    width: 5%;
+    margin: 30px;
+}
+
+#mylogo {
+    background-color: #303030;
+    color: #F4F4F4;
+    text-align: center;
+    font-size: x-large;
+    padding-bottom: 35px;
+    padding-top: 35px;
+}
+
+#izem {
+    font-weight: 900;
+    color: red;
+}
+
+/* fin footer */
